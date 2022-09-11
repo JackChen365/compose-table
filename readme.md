@@ -45,7 +45,7 @@ SimpleTable(
     }
 ```
 
-<details>
+</details>
 
 #### Initial data with database.
 

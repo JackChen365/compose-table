@@ -3,7 +3,7 @@
 Compose-table is a funny compose project to display multiple rows and columns. You can scroll in any direction (
 vertically and horizontally)
 
-Since the official compose didn't support scroll in any directions. We can use this model to display all kinds of data.
+Since the official compose doesn't support scroll in any directions. We can use this model to display all kinds of data.
 
 ## Table of content
 

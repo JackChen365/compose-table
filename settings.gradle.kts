@@ -12,7 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-enableFeaturePreview("VERSION_CATALOGS")
 rootProject.name = "compose-table"
 include(":app")
 include(":library")

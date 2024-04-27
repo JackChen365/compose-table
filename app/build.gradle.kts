@@ -7,7 +7,14 @@ plugins {
 android {
     namespace = "com.github.jackchen.compose.table"
     compileSdk = libs.versions.compileSdk.get().toInt()
-
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("demo.keystore")
+            storePassword = "123456"
+            keyPassword = "123456"
+            keyAlias = "demo"
+        }
+    }
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.compileSdk.get().toInt()
@@ -15,6 +22,7 @@ android {
         versionName = "1.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("release")
     }
 
     buildTypes {
@@ -59,7 +67,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.google.devtools.ksp.api)
     implementation(libs.androidx.loader)
-    implementation(project (path = ":library"))
+    implementation(project(path = ":library"))
 
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
